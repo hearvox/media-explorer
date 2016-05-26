@@ -571,7 +571,7 @@ media.controller.MEXP = media.controller.State.extend({
 		if ( typeof(tinymce) === 'undefined' || tinymce.activeEditor === null || tinymce.activeEditor.isHidden() ) {
 			media.editor.insert( _.toArray( urls ).join( "\n\n" ) );
 		} else {
-			media.editor.insert( "<p>" + _.toArray( urls ).join( "</p><p>" ) + "</p>" );
+			media.editor.insert( "[embed]" + _.toArray( urls ).join( "[/embed]\n\n[embed]" ) + "[/embed]" );
 		}
 
 		selection.reset();
